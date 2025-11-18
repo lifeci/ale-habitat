@@ -110,19 +110,19 @@
 
       <div class="gallery">
         <figure class="gallery-item">
-          <img src="assets/images/gallery-1.png" alt="Exterior view of forest garden habitat" />
+          <a href="#img1"><img src="assets/images/gallery-1.png" alt="Exterior view of forest garden habitat" /></a>
           <figcaption>Habitat embedded in a mature forest garden.</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery-2.png" alt="Diagram of water system and rain harvesting" />
+          <a href="#img2"><img src="assets/images/gallery-2.png" alt="Diagram of water system and rain harvesting" /></a>
           <figcaption>Integrated water harvesting and filtration system.</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery-3.png" alt="Interior layout of modular habitat" />
+          <a href="#img3"><img src="assets/images/gallery-3.png" alt="Interior layout of modular habitat" /></a>
           <figcaption>Modular interior optimized for compact living.</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery-4.png" alt="Forest garden multi-layer planting concept" />
+          <a href="#img4"><img src="assets/images/gallery-4.png" alt="Forest garden multi-layer planting concept" /></a>
           <figcaption>Multi-layer forest garden food production.</figcaption>
         </figure>
       </div>
@@ -216,6 +216,39 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox targets for CSS-only overlay (stay on same static page) -->
+  <div id="img1" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-1.png" alt="Exterior view of forest garden habitat (full size)" />
+      <div class="caption">Habitat embedded in a mature forest garden.</div>
+    </div>
+  </div>
+
+  <div id="img2" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-2.png" alt="Diagram of water system and rain harvesting (full size)" />
+      <div class="caption">Integrated water harvesting and filtration system.</div>
+    </div>
+  </div>
+
+  <div id="img3" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-3.png" alt="Interior layout of modular habitat (full size)" />
+      <div class="caption">Modular interior optimized for compact living.</div>
+    </div>
+  </div>
+
+  <div id="img4" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-4.png" alt="Forest garden multi-layer planting concept (full size)" />
+      <div class="caption">Multi-layer forest garden food production.</div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
