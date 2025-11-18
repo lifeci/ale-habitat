@@ -244,6 +244,25 @@ a {
   color: var(--muted);
 }
 
+/* Inline logo next to BAC line in contact */
+.bac-line {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  color: var(--muted);
+}
+
+.inline-logo {
+  width: 64px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
 /* Gallery */
 
 .gallery {
