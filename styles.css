@@ -128,6 +128,66 @@ a {
   font-size: 1rem;
 }
 
+/* Header ALE logo */
+.header-ale-logo {
+  width: 84px;
+  height: auto;
+  display: block;
+}
+
+/* Header brand: ALE + HABITAT | BAC */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-ale {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.header-habitat-text {
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.header-sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+}
+
+.header-bac {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* unified brand logo sizing */
+.brand-logo {
+  width: 64px;
+  height: auto;
+  display: block;
+}
+
+.header-bac-logo {
+  /* keep additional styling but size is controlled by .brand-logo */
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.04);
+  background: #fff;
+}
+
+.brand-text, .header-bac-text {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+
 /* Hero */
 
 .hero {
@@ -261,6 +321,65 @@ a {
   border-radius: 6px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.35);
   border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ALE project line (used in header/footer) */
+.ale-line {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+  color: var(--muted);
+}
+
+.ale-text {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+/* Footer brand area */
+.footer-brand {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 72px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.footer-ale-text, .footer-bac-text {
+  color: var(--muted);
+}
+
+.footer-sep {
+  width: 1px;
+  height: 42px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+}
+
+/* Responsive tweaks for brand logos */
+@media (max-width: 800px) {
+  .brand-logo {
+    width: 48px;
+  }
+
+  .footer-logo {
+    width: 56px;
+  }
+
+  .footer-sep, .header-sep {
+    height: 28px;
+  }
 }
 
 /* Gallery */
@@ -416,5 +535,8 @@ a {
 
   .nav-links.nav-open {
     display: flex;
+  }
+  .brand-logo {
+    width: 48px;
   }
 }
