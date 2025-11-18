@@ -128,10 +128,8 @@ a {
   font-size: 1rem;
 }
 
-/* Header ALE logo */
+/* Header ALE logo: keep display only; sizing and visual style handled by .brand-logo */
 .header-ale-logo {
-  width: 84px;
-  height: auto;
   display: block;
 }
 
@@ -170,8 +168,13 @@ a {
 /* unified brand logo sizing */
 .brand-logo {
   width: 64px;
-  height: auto;
+  height: 64px;
   display: block;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.04);
+  background: #fff;
 }
 
 .header-bac-logo {
@@ -371,6 +374,7 @@ a {
 @media (max-width: 800px) {
   .brand-logo {
     width: 48px;
+    height: 48px;
   }
 
   .footer-logo {
