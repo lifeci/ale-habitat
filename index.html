@@ -14,9 +14,16 @@
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">
-        <span class="logo-main">ALE</span>
-        <span class="logo-sub">habitat</span>
+      <div class="header-brand">
+        <div class="header-ale">
+          <img src="assets/images/logo-ale.jpg" alt="ALE" class="brand-logo header-ale-logo" />
+          <span class="brand-text header-habitat-text">HABITAT</span>
+        </div>
+        <span class="header-sep" aria-hidden="true"></span>
+        <div class="header-bac">
+          <img src="assets/images/logo-bac.jpg" alt="BAC" class="brand-logo header-bac-logo" />
+          <span class="brand-text header-bac-text">BAC</span>
+        </div>
       </div>
 
       <nav class="nav">
@@ -39,18 +46,16 @@
     <div class="container hero-inner">
       <div class="hero-text">
         <h1>Art of Living in Synergy with Nature</h1>
-        <p>
-          Autonomous Living Ecosystems Habitat integrates shelter, water,
-          food, energy and waste into one coherent, nature-first concept of
-          independent living.
-        </p>
-        <div class="hero-actions">
-          <a href="#portfolio" class="btn primary">View Portfolio</a>
+          <p>
+            Autonomous Living Ecosystems Habitat integrates shelter, water,
+            food, energy and waste into one coherent, nature-first concept of
+            independent living.
+          </p>
           <a href="#contact" class="btn secondary">Let’s Talk</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="assets/images/hero.jpg" alt="Forest garden habitat visualization" />
+        <img src="assets/images/hero.png" alt="Forest garden habitat visualization" />
       </div>
     </div>
   </section>
@@ -105,19 +110,19 @@
 
       <div class="gallery">
         <figure class="gallery-item">
-          <img src="assets/images/gallery-1.jpg" alt="Exterior view of forest garden habitat" />
+          <a href="#img1"><img src="assets/images/gallery-1.png" alt="Exterior view of forest garden habitat" /></a>
           <figcaption>Habitat embedded in a mature forest garden.</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery-2.jpg" alt="Diagram of water system and rain harvesting" />
+          <a href="#img2"><img src="assets/images/gallery-2.png" alt="Diagram of water system and rain harvesting" /></a>
           <figcaption>Integrated water harvesting and filtration system.</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery-3.jpg" alt="Interior layout of modular habitat" />
+          <a href="#img3"><img src="assets/images/gallery-3.png" alt="Interior layout of modular habitat" /></a>
           <figcaption>Modular interior optimized for compact living.</figcaption>
         </figure>
         <figure class="gallery-item">
-          <img src="assets/images/gallery-4.jpg" alt="Forest garden multi-layer planting concept" />
+          <a href="#img4"><img src="assets/images/gallery-4.png" alt="Forest garden multi-layer planting concept" /></a>
           <figcaption>Multi-layer forest garden food production.</figcaption>
         </figure>
       </div>
@@ -157,11 +162,9 @@
             <strong>Name:</strong> Irena Potapińska<br />
             <strong>Phone:</strong> <a href="tel:+48502702477">+48 502 702 477</a><br />
             <strong>Email:</strong>
-            <a href="mailto:irena.delartos@gmail.com">irena.delartos@gmail.com</a>
+            <a href="mailto:ip@ale-habitat.com">ip@ale-habitat.com</a>
           </p>
-          <p>
-            Part of <strong>BCA – Business Architectural Cluster</strong>.
-          </p>
+          <!-- BAC affiliation moved to footer only -->
         </div>
 
         <div>
@@ -202,8 +205,50 @@
       <p class="footer-small">
         Art of living in synergy with nature.
       </p>
+      <div class="footer-brand">
+        <div class="footer-ale">
+          <span class="footer-ale-text brand-text">ALE HABITAT</span>
+        </div>
+        <span class="footer-sep" aria-hidden="true"></span>
+        <div class="footer-bac">
+          <span class="footer-bac-text brand-text">part of <strong>BAC – Business Architectural Cluster</strong></span>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Lightbox targets for CSS-only overlay (stay on same static page) -->
+  <div id="img1" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-1.png" alt="Exterior view of forest garden habitat (full size)" />
+      <div class="caption">Habitat embedded in a mature forest garden.</div>
+    </div>
+  </div>
+
+  <div id="img2" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-2.png" alt="Diagram of water system and rain harvesting (full size)" />
+      <div class="caption">Integrated water harvesting and filtration system.</div>
+    </div>
+  </div>
+
+  <div id="img3" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-3.png" alt="Interior layout of modular habitat (full size)" />
+      <div class="caption">Modular interior optimized for compact living.</div>
+    </div>
+  </div>
+
+  <div id="img4" class="lightbox" aria-hidden="true">
+    <a class="lightbox-close" href="#portfolio" aria-label="Close">✕</a>
+    <div class="lightbox-inner">
+      <img src="assets/images/gallery-4.png" alt="Forest garden multi-layer planting concept (full size)" />
+      <div class="caption">Multi-layer forest garden food production.</div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

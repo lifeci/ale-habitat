@@ -1,9 +1,10 @@
 :root {
-  --bg: #050609;
-  --bg-alt: #0e1317;
-  --card: #171c22;
-  --accent: #8fdd3c;
-  --accent-soft: rgba(143, 221, 60, 0.1);
+  /* Nature-themed palette */
+  --bg: #072a1f; /* deep forest green */
+  --bg-alt: #0f3a2b; /* slightly lighter green-teal */
+  --card: #123022; /* cards / panels */
+  --accent: #9fe448; /* bright leaf green accent */
+  --accent-soft: rgba(159, 228, 72, 0.12);
   --text: #f5f7fa;
   --muted: #9ba4b4;
   --border: #242a33;
@@ -26,7 +27,7 @@ body {
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  background: radial-gradient(circle at top, #151a22 0, #050609 55%);
+  background: radial-gradient(circle at top left, var(--bg-alt) 0%, var(--bg) 60%);
   color: var(--text);
 }
 
@@ -128,6 +129,68 @@ a {
   font-size: 1rem;
 }
 
+/* Header ALE logo: keep display only; sizing and visual style handled by .brand-logo */
+.header-ale-logo {
+  display: block;
+}
+
+/* Header brand: ALE + HABITAT | BAC */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-ale {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.header-habitat-text {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.header-sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+}
+
+.header-bac {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* unified brand logo sizing */
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.04);
+  background: #fff;
+}
+
+.header-bac-logo {
+  /* keep additional styling but size is controlled by .brand-logo */
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.04);
+  background: #fff;
+}
+
+.brand-text, .header-bac-text {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+
 /* Hero */
 
 .hero {
@@ -163,6 +226,31 @@ a {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Center and contain hero image across breakpoints */
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* On small screens keep some padding so image doesn't touch edges */
+@media (max-width: 800px) {
+  .hero-image img {
+    width: 100%;
+    padding: 0 6vw;
+    box-sizing: border-box;
+  }
 }
 
 /* Buttons */
@@ -244,6 +332,85 @@ a {
   color: var(--muted);
 }
 
+/* Inline logo next to BAC line in contact */
+.bac-line {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  color: var(--muted);
+}
+
+.inline-logo {
+  width: 64px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ALE project line (used in header/footer) */
+.ale-line {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+  color: var(--muted);
+}
+
+.ale-text {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+/* Footer brand area */
+.footer-brand {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 72px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.footer-ale-text, .footer-bac-text {
+  color: var(--muted);
+}
+
+.footer-sep {
+  width: 1px;
+  height: 42px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+}
+
+/* Responsive tweaks for brand logos */
+@media (max-width: 800px) {
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-logo {
+    width: 56px;
+  }
+
+  .footer-sep, .header-sep {
+    height: 28px;
+  }
+}
+
 /* Gallery */
 
 .gallery {
@@ -268,6 +435,59 @@ a {
   margin-top: 0.5rem;
   font-size: 0.8rem;
   color: var(--muted);
+}
+
+/* CSS-only lightbox (anchor + :target) overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 3, 0.85);
+  padding: 3vh 3vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease-in-out;
+  z-index: 2000;
+}
+.lightbox:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox .lightbox-inner {
+  max-width: 96vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+.lightbox img {
+  max-width: 92vw;
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 46px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.lightbox .caption {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: var(--text);
+  background: rgba(0,0,0,0.35);
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.04);
 }
 
 /* Downloads */
@@ -397,5 +617,8 @@ a {
 
   .nav-links.nav-open {
     display: flex;
+  }
+  .brand-logo {
+    width: 48px;
   }
 }
